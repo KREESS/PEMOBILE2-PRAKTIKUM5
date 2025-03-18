@@ -7,6 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,8 +15,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
+        useMaterial3: true, // Tambahan jika ingin menggunakan Material 3
+        primarySwatch: Colors.amber,
+        fontFamily: 'Roboto', // Tambahan Font Kustom
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(), // HomeScreen dengan const
     );
   }
 }
